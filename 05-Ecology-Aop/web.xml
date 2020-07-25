@@ -1,0 +1,17 @@
+<servlet>
+	<servlet-name>WeaIocInitServlet</servlet-name>
+	<servlet-class>com.weaverboot.frame.ioc.prop.init.WeaIocInitServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>WeaIocInitServlet</servlet-name>
+	<url-pattern>/weaIoc/init</url-pattern>
+</servlet-mapping>
+<filter>
+	<filter-name>WeaComponentFilter</filter-name>
+	<filter-class>com.weaverboot.frame.ioc.filter.WeaComponentFilter</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>WeaComponentFilter</filter-name>
+	<url-pattern>/api/*</url-pattern>
+</filter-mapping>
